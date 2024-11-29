@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import useMasonry from "@/utils/useMasonry";
 import Image, { StaticImageData } from "next/image";
 import patagoniaLogo from "../../../public/images/logo-patagonia.svg";
@@ -51,7 +50,6 @@ const testimonials = [
 
 export default function Testimonials() {
   const masonryContainer = useMasonry();
-  const [category, setCategory] = useState<number>(1);
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -75,7 +73,7 @@ export default function Testimonials() {
         >
           {testimonials.map((testimonial, index) => (
             <div key={index} className="group">
-              <Testimonial testimonial={testimonial} category={category}>
+              <Testimonial testimonial={testimonial}>
                 {testimonial.content}
               </Testimonial>
             </div>
@@ -95,7 +93,6 @@ export function Testimonial({
     company: string;
     content: string;
   };
-  category: number;
   children: React.ReactNode;
 }) {
   return (
