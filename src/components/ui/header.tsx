@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Logo from "./logo";
+import { Button } from "./button";
 
 export default function Header() {
   return (
@@ -27,12 +28,12 @@ export default function Header() {
           {/* Desktop sign in links */}
           <ul className="flex flex-1 items-center justify-end gap-3">
             <li>
-              <Link
-                href="/sobre"
-                className="px-2 py-2 rounded-lg bg-gradient-to-t from-indigo-600 to-indigo-500 text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
+              <a
+                target="_blank"
+                href="https://wa.me/5599984309220?text=Ol%C3%A1%2C%20Como%20funcionar%20o%20Consumo%20Consciente%3F "
               >
-                Saiba mais
-              </Link>
+                <Button>Conversar agora!</Button>
+              </a>
             </li>
           </ul>
         </div>

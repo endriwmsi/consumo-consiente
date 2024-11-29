@@ -12,14 +12,10 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-import PageIllustration from "@/components/page-illustration";
-import Hero from "@/components/about/hero-about";
-import Workflows from "@/components/about/workflows";
-import Features from "@/components/about/features";
-import Testimonials from "@/components/about/testimonials";
-import Cta from "@/components/about/cta";
+import About from "@/components/about-page/about";
+import Mission from "@/components/about-page/mission";
 
-export default function About() {
+export default function AboutPage() {
   return (
     <>
       <div className="w-full top-0 h-[300px] flex flex-col justify-center items-center ">
@@ -38,12 +34,8 @@ export default function About() {
         </Breadcrumb>
       </div>
 
-      <PageIllustration />
-      <Hero />
-      <Workflows />
-      <Features />
-      <Testimonials />
-      <Cta />
+      <About />
+      <Mission />
     </>
   );
 }
